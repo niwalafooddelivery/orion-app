@@ -21,7 +21,7 @@ const GROQ_URL = 'https://api.groq.com/openai/v1/chat/completions';
 
 app.use(express.json());
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(__dirname));
 
 app.post('/api/chat', async (req, res) => {
   try {
