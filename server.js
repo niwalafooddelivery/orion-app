@@ -22,7 +22,7 @@ const GEMINI_URL = `https://generativelanguage.googleapis.com/v1beta/models/${GE
 app.use(express.json());
 
 // Serve the frontend (index.html and any other static files)
-aapp.use(express.static(__dirname));
+app.use(express.static(__dirname));
 
 // Proxy endpoint: browser calls THIS, server calls Gemini with the secret key
 app.post('/api/chat', async (req, res) => {
